@@ -1,6 +1,24 @@
 console.log("script is running ")
 
 
+lpTag.identities=[];
+lpTag.identities.push(identityFn);
+
+function identityFn(callback) {
+   callback({
+      iss: "test",
+      acr: "loal",
+      sub: "12345"
+   });
+}
+
+
+
+
+
+
+
+
 function clickEvent(){
    console.log("on click was called")
    
@@ -19,6 +37,11 @@ function clickEvent(){
 }
 
 
+
+
+
+
+// This is ABC related script
 var baseUrl = "https://bcrw.apple.com/urn:biz:44542500-8433-4337-b319-6bc47a5ba28c?"
 var intendId = ""
 var bizGroupId = ""
