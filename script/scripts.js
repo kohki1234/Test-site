@@ -1,10 +1,10 @@
-console.log("script is running ")
+console.log("script.js is running ")
 
 // Pushing SDE's to LE
 lpTag.sdes = lpTag.sdes||[];
 lpTag.sdes.push(
    {
-        "type": "ctmrinfo",  //MANDATORY
+        "type": "N/A",  //MANDATORY
         "info": {
            "cstatus": "テスト",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
            "ctype": "テスト",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
