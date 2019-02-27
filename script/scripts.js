@@ -6,8 +6,8 @@ lpTag.sdes.push(
    {
         "type": "ctmrinfo",  //MANDATORY
         "info": {
-           "cstatus": "cancelled",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
-           "ctype": "vip",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
+           "cstatus": "テスト",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
+           "ctype": "テスト",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
            "customerId": "138766AC",  //UNIQUE CUSTOMER IDENTIFIER
            "balance": -400.99,  //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
            "currency": "USD",  //CURRENCY CODE
