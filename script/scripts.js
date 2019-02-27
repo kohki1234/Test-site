@@ -4,7 +4,7 @@ console.log("script.js is running ")
 lpTag.sdes = lpTag.sdes||[];
 lpTag.sdes.push(
    {
-        "type": "N/A",  //MANDATORY
+        "type": "ctmrinfo",  //MANDATORY
         "info": {
            "cstatus": "テスト",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
            "ctype": "テスト",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
