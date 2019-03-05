@@ -1,7 +1,7 @@
 console.log("script.js is running ")
 
 // Pushing SDE's to LE
-lpTag.sdes = lpTag.sdes||[];
+lpTag.section = ["auth"];
 lpTag.sdes.push(
    {
         "type": "ctmrinfo",  //MANDATORY
