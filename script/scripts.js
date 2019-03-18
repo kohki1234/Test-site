@@ -33,7 +33,7 @@ lpTag.sdes.push(
    }
 );
 
-// chat AUTH
+// chat authentication script 
 window.lpGetAuthenticationToken = function (callback) {
    callback("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xpdmVwZXJzb24uY29tIiwic3ViIjoiS29oa2kyIiwiaWF0IjoxNTMyMzM0Nzg1LCJleHAiOjE1OTIzMzQ3ODUsImxwX3NkZXMiOlt7InR5cGUiOiJjdG1yaW5mbyIsImluZm8iOnsiY3N0YXR1cyI6ImNhbmNlbGxlZCIsImN0eXBlIjoidmlwIiwiYmFsYW5jZSI6LTQwMC45OSwic29jaWFsSWQiOiIxMTI1NjMyNDc4MCIsImltZWkiOiIzNTQzNTQ2NTQzNTQ1Njg4IiwiY29tcGFueVNpemUiOjUwMCwiYWNjb3VudE5hbWUiOiJiYW5rIGNvcnAiLCJyb2xlIjoiYnJva2VyIiwibGFzdFBheW1lbnREYXRlIjp7ImRheSI6MTUsIm1vbnRoIjoxMCwieWVhciI6MjAxNH0sInJlZ2lzdHJhdGlvbkRhdGUiOnsiZGF5IjoyMywibW9udGgiOjUsInllYXIiOjIwMTN9fX1dfQ.tXWDluL5pqN9vocACfITVGD_UkrOP4bzb_3Ic6ot8SFdwjktgIK5SEbCNDZ4--4_d_jl2w1j9jwb5Ya6FpOCccnJU4uKzLvAVxoi1-pm8NDSS9i0vezXdADU3aWw5JcNiEW9pgUlUcvDWbvva8iknhLdQCdrqOFvMejaSp8L9YjJsnsKmrcDCzBdiljHsbte1qM642pcgeuHLXiFuCSl-54ncxqliPyWGzlGHWNXxVq6MWle1f4GvDJzfCgX2p5DIQ4eWV9LWo7W9WsX41xI2XoCE10pkRjPpOilj25t3GpiI5_rYKfvrCu7NVBA2Y4TOP94IxpPtAvGSlssxeoYtw");
 
@@ -43,7 +43,7 @@ window.lpGetAuthenticationToken = function (callback) {
 
 // Window API for ABC 
 window.abctaglet = function(payload){
-   window.location.href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:44542500-8433-4337-b319-6bc47a5ba28c";
+   window.location.href="https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:44542500-8433-4337-b319-6bc47a5ba28c&biz-intent-id=chrome&biz-group-id=Desktop%20PC";
    console.log(payload);
    }
 //LP authentication related setting is here
