@@ -43,7 +43,7 @@ window.lpGetAuthenticationToken = function (callback) {
 
 // Window API for ABC 
 window.abctaglet = function(payload){
-   window.location.href="https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:44542500-8433-4337-b319-6bc47a5ba28c&biz-intent-id=chrome&biz-group-id=Desktop%20PC";
+   window.location.href="https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:44542500-8433-4337-b319-6bc47a5ba28c&biz-intent-id=検証その１&biz-group-id=検証その２";
    console.log(payload);
    }
 //LP authentication related setting is here
