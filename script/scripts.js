@@ -5,21 +5,46 @@ lpTag.section = ["auth"];
 lpTag.sdes.push(
    {
         "type": "ctmrinfo",  //MANDATORY
-        "info":    {
-         "type": "cart",  //MANDATORY
-         "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-         "currency": "USD",  //CURRENCY CODE
-         "numItems": 6,  //NUMBER OF ITEMS IN CART
-         "products": [{
-             "product": {
-             "name": "prod1",  //PRODUCT NAME
-             "category": "category",  //PRODUCT CATEGORY NAME
-             "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-             "price": 7.8  //SINGLE PRODUCT PRICE
-             }, "quantity": 1  //NUMBER OF PRODUCTS
-         }]
-    }
-   }
+        "info": {
+           "cstatus": "テスト",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
+           "ctype": "テスト",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
+           "customerId": "138766AC",  //UNIQUE CUSTOMER IDENTIFIER
+           "balance": -400.99,  //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
+           "currency": "USD",  //CURRENCY CODE
+           "socialId": "11256324780",  //SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER ETC...
+           "imei": "3543546543545688",  //UNIQUE DEVICE OR PHONE IDENTIFIER
+           "userName": "user000",  //CONSUMER NICKNAME OR USERNAME
+           "companySize": 500,  //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
+           "accountName": "bank corp",  //THE CUSTOMER'S COMPANY NAME
+           "role": "broker",  //CONSUMER ROLE TITLE
+           "lastPaymentDate": {
+                 "day": 15,  //THE DAY OF THE LAST PAYMENT NUMERIC VALUE
+                 "month": 10,  //THE MONTH OF THE LAST PAYMENT NUMERIC VALUE
+                 "year": 2014  //THE YEAR OF THE LAST PAYMENT NUMERIC VALUE
+           },
+           "registrationDate": {
+                 "day": 23,  //THE DAY OF THE REGISTRATION NUMERIC VALUE
+                 "month": 5,  //THE MONTH OF THE REGISTRATION NUMERIC VALUE
+                 "year": 2013  //THE YEAR OF THE REGISTRATION NUMERIC VALUE
+           },
+           "storeNumber": "123865",  //STORE NUMBER
+           "storeZipCode": "20505"  //STORE ZIP CODE
+        }
+   },
+   {
+      "type": "cart",  //MANDATORY
+      "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
+      "currency": "USD",  //CURRENCY CODE
+      "numItems": 6,  //NUMBER OF ITEMS IN CART
+      "products": [{
+          "product": {
+          "name": "prod1",  //PRODUCT NAME
+          "category": "category",  //PRODUCT CATEGORY NAME
+          "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+          "price": 7.8  //SINGLE PRODUCT PRICE
+          }, "quantity": 1  //NUMBER OF PRODUCTS
+      }]
+ }
 );
 
 // chat authentication script 
@@ -49,20 +74,26 @@ function identityFn(callback) {
          {
             "type": "test",
             "contactNumber" : ["12345","123456","1234"],
-            "info":    {
-               "type": "ctmrinfo",  //MANDATORY
-               "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-               "currency": "USD",  //CURRENCY CODE
-               "numItems": 6,  //NUMBER OF ITEMS IN CART
-               "products": [{
-                   "product": {
-                   "name": "prod1",  //PRODUCT NAME
-                   "category": "category",  //PRODUCT CATEGORY NAME
-                   "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                   "price": 7.8  //SINGLE PRODUCT PRICE
-                   }, "quantity": 1  //NUMBER OF PRODUCTS
-               }]
-          }
+            "info": {
+            "cstatus": "cancelled",
+            "ctype": "vip",
+            "balance": -400.99,
+            "socialId": "11256324780",
+            "imei": "3543546543545688",
+            "companySize": 500,
+            "accountName": "bank corp",
+            "role": "broker",
+            "lastPaymentDate": {
+               "day": 15,
+               "month": 10,
+               "year": 2014
+            },
+            "registrationDate": {
+               "day": 23,
+               "month": 5,
+               "year": 2013
+            }
+            }
          }
       ]
    });
