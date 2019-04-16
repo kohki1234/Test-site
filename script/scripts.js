@@ -44,29 +44,19 @@ function identityFn(callback) {
       "exp": 1592334785,
       "lp_sdes": [
          {
-            "type": "test",
-            "contactNumber" : ["12345","123456","1234"],
-            "info": {
-            "cstatus": "cancelled",
-            "ctype": "vip",
-            "balance": -400.99,
-            "socialId": "11256324780",
-            "imei": "3543546543545688",
-            "companySize": 500,
-            "accountName": "bank corp",
-            "role": "broker",
-            "lastPaymentDate": {
-               "day": 15,
-               "month": 10,
-               "year": 2014
-            },
-            "registrationDate": {
-               "day": 23,
-               "month": 5,
-               "year": 2013
-            }
-            }
-         }
+            "type": "cart",  //MANDATORY
+            "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
+            "currency": "USD",  //CURRENCY CODE
+            "numItems": 6,  //NUMBER OF ITEMS IN CART
+            "products": [{
+                "product": {
+                "name": "prod1",  //PRODUCT NAME
+                "category": "category",  //PRODUCT CATEGORY NAME
+                "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+                "price": 7.8  //SINGLE PRODUCT PRICE
+                }, "quantity": 1  //NUMBER OF PRODUCTS
+            }]
+       }
       ]
    });
 }
