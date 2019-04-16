@@ -72,7 +72,7 @@ function identityFn(callback) {
       "exp": 1592334785,
       "lp_sdes": [
          {
-            "type": "test",
+            "type": "ctmrinfo",
             "contactNumber" : ["12345","123456","1234"],
             "info": {
             "cstatus": "cancelled",
