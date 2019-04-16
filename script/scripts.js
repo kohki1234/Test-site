@@ -94,7 +94,21 @@ function identityFn(callback) {
                "year": 2013
             }
             }
-         }
+         },
+         {
+            "type": "cart",  //MANDATORY
+            "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
+            "currency": "USD",  //CURRENCY CODE
+            "numItems": 6,  //NUMBER OF ITEMS IN CART
+            "products": [{
+                "product": {
+                "name": "prod1",  //PRODUCT NAME
+                "category": "category",  //PRODUCT CATEGORY NAME
+                "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+                "price": 7.8  //SINGLE PRODUCT PRICE
+                }, "quantity": 1  //NUMBER OF PRODUCTS
+            }]
+       }
       ]
    });
 }
