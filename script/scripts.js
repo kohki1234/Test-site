@@ -50,7 +50,7 @@ function identityFn(callback) {
             "type": "test",
             "contactNumber" : ["12345","123456","1234"],
             "info":    {
-               "type": "cart",  //MANDATORY
+               "type": "ctmrinfo",  //MANDATORY
                "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
                "currency": "USD",  //CURRENCY CODE
                "numItems": 6,  //NUMBER OF ITEMS IN CART
