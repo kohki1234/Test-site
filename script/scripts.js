@@ -4,18 +4,21 @@ console.log("script.js is running ")
 lpTag.section = ["auth"];
 lpTag.sdes.push(
    {
-        "type": "cart",  //MANDATORY
-        "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-        "currency": "USD",  //CURRENCY CODE
-        "numItems": 6,  //NUMBER OF ITEMS IN CART
-        "products": [{
-            "product": {
-            "name": "prod1",  //PRODUCT NAME
-            "category": "category",  //PRODUCT CATEGORY NAME
-            "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-            "price": 7.8  //SINGLE PRODUCT PRICE
-            }, "quantity": 1  //NUMBER OF PRODUCTS
-        }]
+        "type": "ctmrinfo",  //MANDATORY
+        "info":    {
+         "type": "cart",  //MANDATORY
+         "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
+         "currency": "USD",  //CURRENCY CODE
+         "numItems": 6,  //NUMBER OF ITEMS IN CART
+         "products": [{
+             "product": {
+             "name": "prod1",  //PRODUCT NAME
+             "category": "category",  //PRODUCT CATEGORY NAME
+             "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+             "price": 7.8  //SINGLE PRODUCT PRICE
+             }, "quantity": 1  //NUMBER OF PRODUCTS
+         }]
+    }
    }
 );
 
@@ -44,19 +47,23 @@ function identityFn(callback) {
       "exp": 1592334785,
       "lp_sdes": [
          {
-            "type": "cart",  //MANDATORY
-            "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-            "currency": "USD",  //CURRENCY CODE
-            "numItems": 6,  //NUMBER OF ITEMS IN CART
-            "products": [{
-                "product": {
-                "name": "prod1",  //PRODUCT NAME
-                "category": "category",  //PRODUCT CATEGORY NAME
-                "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                "price": 7.8  //SINGLE PRODUCT PRICE
-                }, "quantity": 1  //NUMBER OF PRODUCTS
-            }]
-       }
+            "type": "test",
+            "contactNumber" : ["12345","123456","1234"],
+            "info":    {
+               "type": "cart",  //MANDATORY
+               "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
+               "currency": "USD",  //CURRENCY CODE
+               "numItems": 6,  //NUMBER OF ITEMS IN CART
+               "products": [{
+                   "product": {
+                   "name": "prod1",  //PRODUCT NAME
+                   "category": "category",  //PRODUCT CATEGORY NAME
+                   "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+                   "price": 7.8  //SINGLE PRODUCT PRICE
+                   }, "quantity": 1  //NUMBER OF PRODUCTS
+               }]
+          }
+         }
       ]
    });
 }
