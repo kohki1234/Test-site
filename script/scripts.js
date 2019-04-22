@@ -91,25 +91,24 @@ function identityFn(callback) {
       "lp_sdes": [
          {
             "type": "ctmrinfo",
-            "contactNumber" : ["12345","123456","1234"],
             "info": {
-            "cstatus": "cancelled",
-            "ctype": "vip",
-            "balance": -400.99,
-            "socialId": "11256324780",
-            "imei": "3543546543545688",
-            "companySize": 500,
-            "accountName": "bank corp",
-            "role": "broker",
-            "lastPaymentDate": {
-               "day": 15,
-               "month": 10,
-               "year": 2014
-            },
-            "registrationDate": {
-               "day": 23,
-               "month": 5,
-               "year": 2013
+              "cstatus": "cancelled",
+              "ctype": "vip",
+              "balance": -400.99,
+              "socialId": "11256324780",
+              "imei": "3543546543545688",
+              "companySize": 500,
+              "accountName": "bank corp",
+              "role": "broker",
+              "lastPaymentDate": {
+                "day": 15,
+                "month": 10,
+                "year": 2014
+              },
+              "registrationDate": {
+                "day": 23,
+                "month": 5,
+                "year": 2013
             }
             }
          },
