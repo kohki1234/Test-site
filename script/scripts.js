@@ -2,75 +2,34 @@ console.log("script.js is running ")
 
 // Pushing SDE's to LE
 lpTag.section = ["auth"];
-// lpTag.sdes.push(
-//    {
-//         "type": "ctmrinfo",  //MANDATORY
-//         "info": {
-//            "cstatus": "テスト",  //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
-//            "ctype": "テスト",  //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
-//            "customerId": "138766AC",  //UNIQUE CUSTOMER IDENTIFIER
-//            "balance": -400.99,  //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
-//            "currency": "USD",  //CURRENCY CODE
-//            "socialId": "11256324780",  //SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER ETC...
-//            "imei": "3543546543545688",  //UNIQUE DEVICE OR PHONE IDENTIFIER
-//            "userName": "user000",  //CONSUMER NICKNAME OR USERNAME
-//            "companySize": 500,  //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
-//            "accountName": "bank corp",  //THE CUSTOMER'S COMPANY NAME
-//            "role": "broker",  //CONSUMER ROLE TITLE
-//            "lastPaymentDate": {
-//                  "day": 15,  //THE DAY OF THE LAST PAYMENT NUMERIC VALUE
-//                  "month": 10,  //THE MONTH OF THE LAST PAYMENT NUMERIC VALUE
-//                  "year": 2014  //THE YEAR OF THE LAST PAYMENT NUMERIC VALUE
-//            },
-//            "registrationDate": {
-//                  "day": 23,  //THE DAY OF THE REGISTRATION NUMERIC VALUE
-//                  "month": 5,  //THE MONTH OF THE REGISTRATION NUMERIC VALUE
-//                  "year": 2013  //THE YEAR OF THE REGISTRATION NUMERIC VALUE
-//            },
-//            "storeNumber": "123865",  //STORE NUMBER
-//            "storeZipCode": "20505"  //STORE ZIP CODE
-//         }
-//    },
-//    {
-//       "type": "cart",  //MANDATORY
-//       "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-//       "currency": "USD",  //CURRENCY CODE
-//       "numItems": 6,  //NUMBER OF ITEMS IN CART
-//       "products": [{
-//           "product": {
-//           "name": "prod1",  //PRODUCT NAME
-//           "category": "category",  //PRODUCT CATEGORY NAME
-//           "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-//           "price": 7.8  //SINGLE PRODUCT PRICE
-//           }, "quantity": 1  //NUMBER OF PRODUCTS
-//       }]
-//  },
-//  {
-//    "type": "purchase",  //MANDATORY
-//    "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
-//    "currency": "USD",  //CURRENCY CODE
-//    "orderId": "DRV1534XC",  //UNIQUE ORDER ID OR RECEIPT ID
-//    "cart":{
-//        "products": [{
-//             "product": {
-//                  "name": "antivirus pro plan",  //PRODUCT NAME
-//                  "category": "software",  //PRODUCT CATEGORY NAME
-//                  "sku": "xyz001",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-//                  "price": 7.8  //SINGLE PRODUCT PRICE
-//             },
-//        "quantity": 3  //QUANTITY OF THIS PRODUCT
-//        }]
-//    }
-// }
- 
-// );
+lpTag.sdes.push(
+   {
+      "type": "ctmrinfo",
+      "info": {
+        "cstatus": "cancelled",
+        "ctype": "vip",
+        "balance": -400.99,
+        "socialId": "11256324780",
+        "imei": "3543546543545688",
+        "companySize": 500,
+        "accountName": "bank corp",
+        "role": "broker",
+        "lastPaymentDate": {
+          "day": 15,
+          "month": 10,
+          "year": 2014
+        },
+        "registrationDate": {
+          "day": 23,
+          "month": 5,
+          "year": 2013
+      }
+   }
+}
 
-// chat authentication script 
-window.lpGetAuthenticationToken = function (callback) {
-   callback("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xpdmVwZXJzb24uY29tIiwic3ViIjoiS29oa2kyIiwiaWF0IjoxNTMyMzM0Nzg1LCJleHAiOjE1OTIzMzQ3ODUsImxwX3NkZXMiOlt7InR5cGUiOiJjdG1yaW5mbyIsImluZm8iOnsiY3N0YXR1cyI6ImNhbmNlbGxlZCIsImN0eXBlIjoidmlwIiwiYmFsYW5jZSI6LTQwMC45OSwic29jaWFsSWQiOiIxMTI1NjMyNDc4MCIsImltZWkiOiIzNTQzNTQ2NTQzNTQ1Njg4IiwiY29tcGFueVNpemUiOjUwMCwiYWNjb3VudE5hbWUiOiJiYW5rIGNvcnAiLCJyb2xlIjoiYnJva2VyIiwibGFzdFBheW1lbnREYXRlIjp7ImRheSI6MTUsIm1vbnRoIjoxMCwieWVhciI6MjAxNH0sInJlZ2lzdHJhdGlvbkRhdGUiOnsiZGF5IjoyMywibW9udGgiOjUsInllYXIiOjIwMTN9fX1dfQ.tXWDluL5pqN9vocACfITVGD_UkrOP4bzb_3Ic6ot8SFdwjktgIK5SEbCNDZ4--4_d_jl2w1j9jwb5Ya6FpOCccnJU4uKzLvAVxoi1-pm8NDSS9i0vezXdADU3aWw5JcNiEW9pgUlUcvDWbvva8iknhLdQCdrqOFvMejaSp8L9YjJsnsKmrcDCzBdiljHsbte1qM642pcgeuHLXiFuCSl-54ncxqliPyWGzlGHWNXxVq6MWle1f4GvDJzfCgX2p5DIQ4eWV9LWo7W9WsX41xI2XoCE10pkRjPpOilj25t3GpiI5_rYKfvrCu7NVBA2Y4TOP94IxpPtAvGSlssxeoYtw");
+);
 
-   // callback("not yet implemented well");
-};
+
 
 
 // Window API for ABC 
@@ -85,72 +44,43 @@ window.abctaglet = function(payload){
 function identityFn(callback) {
    callback({
       "iss": "https://liveperson.com",
-      "sub": "Kohki2",
-      "iat": 1532334785,
-      "exp": 1592334785,
+      "sub": "Kohki4",
+      "iat": 1532334846,
+      "exp": 1592334846,
       "lp_sdes": [
          {
             "type": "ctmrinfo",
-            "contactNumber" : ["12345","123456","1234"],
             "info": {
-            "cstatus": "cancelled",
-            "ctype": "vip",
-            "balance": -400.99,
-            "socialId": "11256324780",
-            "imei": "3543546543545688",
-            "companySize": 500,
-            "accountName": "bank corp",
-            "role": "broker",
-            "lastPaymentDate": {
-               "day": 15,
-               "month": 10,
-               "year": 2014
-            },
-            "registrationDate": {
-               "day": 23,
-               "month": 5,
-               "year": 2013
+              "cstatus": "cancelled",
+              "ctype": "vip",
+              "balance": -400.99,
+              "socialId": "11256324780",
+              "imei": "3543546543545688",
+              "companySize": 500,
+              "accountName": "bank corp",
+              "role": "broker",
+              "lastPaymentDate": {
+                "day": 15,
+                "month": 10,
+                "year": 2014
+              },
+              "registrationDate": {
+                "day": 23,
+                "month": 5,
+                "year": 2013
             }
             }
-         },
-         {
-            "type": "cart",  //MANDATORY
-            "total": 11.7,  //TOTAL VALUE OF THE CART AFTER DISCOUNT
-            "currency": "USD",  //CURRENCY CODE
-            "numItems": 6,  //NUMBER OF ITEMS IN CART
-            "products": [{
-                "product": {
-                "name": "prod1",  //PRODUCT NAME
-                "category": "category",  //PRODUCT CATEGORY NAME
-                "sku": "sku",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                "price": 7.8  //SINGLE PRODUCT PRICE
-                }, "quantity": 1  //NUMBER OF PRODUCTS
-            }]
-       },
-       {
-         "type": "purchase",  //MANDATORY
-         "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
-         "currency": "USD",  //CURRENCY CODE
-         "orderId": "DRV1534XC",  //UNIQUE ORDER ID OR RECEIPT ID
-         "cart":{
-             "products": [{
-                  "product": {
-                       "name": "antivirus pro plan",  //PRODUCT NAME
-                       "category": "software",  //PRODUCT CATEGORY NAME
-                       "sku": "xyz001",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                       "price": 7.8  //SINGLE PRODUCT PRICE
-                  },
-             "quantity": 3  //QUANTITY OF THIS PRODUCT
-             }]
-         }
-    }
+         }     
       ]
    });
 }
 
+// chat and web messaging authentication script 
 window.lpGetAuthenticationToken = function (callback) {
-   callback("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xpdmVwZXJzb24uY29tIiwic3ViIjoiS29oa2kyIiwiaWF0IjoxNTMyMzM0Nzg1LCJleHAiOjE1OTIzMzQ3ODUsImxwX3NkZXMiOlt7InR5cGUiOiJjdG1yaW5mbyIsImluZm8iOnsiY3N0YXR1cyI6ImNhbmNlbGxlZCIsImN0eXBlIjoidmlwIiwiYmFsYW5jZSI6LTQwMC45OSwic29jaWFsSWQiOiIxMTI1NjMyNDc4MCIsImltZWkiOiIzNTQzNTQ2NTQzNTQ1Njg4IiwiY29tcGFueVNpemUiOjUwMCwiYWNjb3VudE5hbWUiOiJiYW5rIGNvcnAiLCJyb2xlIjoiYnJva2VyIiwibGFzdFBheW1lbnREYXRlIjp7ImRheSI6MTUsIm1vbnRoIjoxMCwieWVhciI6MjAxNH0sInJlZ2lzdHJhdGlvbkRhdGUiOnsiZGF5IjoyMywibW9udGgiOjUsInllYXIiOjIwMTN9fX1dfQ.tXWDluL5pqN9vocACfITVGD_UkrOP4bzb_3Ic6ot8SFdwjktgIK5SEbCNDZ4--4_d_jl2w1j9jwb5Ya6FpOCccnJU4uKzLvAVxoi1-pm8NDSS9i0vezXdADU3aWw5JcNiEW9pgUlUcvDWbvva8iknhLdQCdrqOFvMejaSp8L9YjJsnsKmrcDCzBdiljHsbte1qM642pcgeuHLXiFuCSl-54ncxqliPyWGzlGHWNXxVq6MWle1f4GvDJzfCgX2p5DIQ4eWV9LWo7W9WsX41xI2XoCE10pkRjPpOilj25t3GpiI5_rYKfvrCu7NVBA2Y4TOP94IxpPtAvGSlssxeoYtw");
-}
+   callback("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xpdmVwZXJzb24uY29tIiwic3ViIjoiS29oa2k0IiwiaWF0IjoxNTMyMzM0ODQ2LCJleHAiOjE1OTIzMzQ4NDYsImxwX3NkZXMiOlt7InR5cGUiOiJjdG1yaW5mbyIsImluZm8iOnsiY3N0YXR1cyI6ImNhbmNlbGxlZCIsImN0eXBlIjoidmlwIiwiYmFsYW5jZSI6LTQwMC45OSwic29jaWFsSWQiOiIxMTI1NjMyNDc4MCIsImltZWkiOiIzNTQzNTQ2NTQzNTQ1Njg4IiwiY29tcGFueVNpemUiOjUwMCwiYWNjb3VudE5hbWUiOiJiYW5rIGNvcnAiLCJyb2xlIjoiYnJva2VyIiwibGFzdFBheW1lbnREYXRlIjp7ImRheSI6MTUsIm1vbnRoIjoxMCwieWVhciI6MjAxNH0sInJlZ2lzdHJhdGlvbkRhdGUiOnsiZGF5IjoyMywibW9udGgiOjUsInllYXIiOjIwMTN9fX1dfQ.i9kH3bsfe9QRmSoZ_-lbcBslSlf560iu0zFCZacfx-Rh68Qh2CW8FS_J6HFljp-A1pyHvxPtyHljDWV1-kq-xkbczyWUsL8T978leDKML8xFGHHTDW-U-F33CRzb7VAyqcAu38owQ9AGam-5CSAe484YbDQ_7EU77rMNoOCjBuL_7yAQ8_mFghc8hPj4J8PTFCuFyxKw9izXr3RvdRyc3_FUFILWSZ4Hbd-GEhlR4blFFFSZhiVofNhjSYHycVZpYqt4CPAuNXnVZjGWDyD-f5Tz-EXtLcOaX7JRYGIy1fl56KRC1BMTbRiIJe9-na222tv896eFpb57w7W-1yHSJw");
+
+   console.log("lpGetAuthenticationToken called")
+};
 
 
 function clickEvent(){
