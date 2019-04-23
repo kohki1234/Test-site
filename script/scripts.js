@@ -1,6 +1,46 @@
 console.log("script.js is running ")
 
 // Pushing SDE's to LE
+
+lpTag.identities=[];
+lpTag.identities.push(identityFn);
+
+function identityFn(callback) {
+   callback({
+      "iss": "https://liveperson.com",
+      "sub": "Kohki4",
+      "iat": 1532334846,
+      "exp": 1592334846,
+      "lp_sdes": [
+         {
+            "type": "ctmrinfo",
+            "info": {
+              "cstatus": "cancelled",
+              "ctype": "vip",
+              "balance": -400.99,
+              "socialId": "11256324780",
+              "imei": "3543546543545688",
+              "companySize": 500,
+              "accountName": "bank corp",
+              "role": "broker",
+              "lastPaymentDate": {
+                "day": 15,
+                "month": 10,
+                "year": 2014
+              },
+              "registrationDate": {
+                "day": 23,
+                "month": 5,
+                "year": 2013
+            }
+            }
+         }     
+      ]
+   });
+};
+
+
+
 lpTag.section = ["auth"];
 lpTag.sdes.push(
    {
@@ -46,39 +86,7 @@ window.abctaglet = function(payload){
 // lpTag.identities=[];
 // lpTag.identities.push(identityFn);
 
-function identityFn(callback) {
-   callback({
-      "iss": "https://liveperson.com",
-      "sub": "Kohki4",
-      "iat": 1532334846,
-      "exp": 1592334846,
-      "lp_sdes": [
-         {
-            "type": "ctmrinfo",
-            "info": {
-              "cstatus": "cancelled",
-              "ctype": "vip",
-              "balance": -400.99,
-              "socialId": "11256324780",
-              "imei": "3543546543545688",
-              "companySize": 500,
-              "accountName": "bank corp",
-              "role": "broker",
-              "lastPaymentDate": {
-                "day": 15,
-                "month": 10,
-                "year": 2014
-              },
-              "registrationDate": {
-                "day": 23,
-                "month": 5,
-                "year": 2013
-            }
-            }
-         }     
-      ]
-   });
-}
+
 
 // chat and web messaging authentication script 
 window.lpGetAuthenticationToken = function (callback) {
