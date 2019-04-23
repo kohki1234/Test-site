@@ -57,10 +57,9 @@ function identityFn(callback) {
       "iat": 1532334785,
       "exp": 1592334785,
       "lp_sdes": [
-         {
-            "type": "test",
-            "contactNumber" : ["12345","123456","1234"],
-            "info": {
+        {
+          "type": "ctmrinfo",
+          "info": {
             "cstatus": "cancelled",
             "ctype": "vip",
             "balance": -400.99,
@@ -70,19 +69,19 @@ function identityFn(callback) {
             "accountName": "bank corp",
             "role": "broker",
             "lastPaymentDate": {
-               "day": 15,
-               "month": 10,
-               "year": 2014
+              "day": 15,
+              "month": 10,
+              "year": 2014
             },
             "registrationDate": {
-               "day": 23,
-               "month": 5,
-               "year": 2013
+              "day": 23,
+              "month": 5,
+              "year": 2013
             }
-            }
-         }
+          }
+        }
       ]
-   });
+    });
 }
 
 window.lpGetAuthenticationToken = function (callback) {
